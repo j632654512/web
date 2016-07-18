@@ -1,0 +1,139 @@
+.flow_img{
+    background-color: #ffffff;
+    border-bottom:1px solid #dfdfdf;
+    width:100%;
+    height: 200px;
+}
+.flow_img li{
+    width: 14.2%;
+    float: left;
+    padding-top: 50px;
+    color: #999999;
+    font-weight: bolder;
+}
+.flow_img li div{
+    text-align: center;
+}
+.img_padding{
+    margin-top: 10px;
+}
+section{
+    margin-top: 20px;
+    padding-bottom: 100px;
+}
+/**同意，拒绝**/
+.consent{
+    width: 80%;
+    border:1px solid #dfdfdf;
+    position: relative;
+    top: 30px;
+}
+.consent div{
+    width: 60%;
+    height: 100px;
+    margin-top: 50px;
+}
+.consent div p{
+    text-align: center;
+    margin-top: 10px;
+}
+.consentText{
+    text-align: center;
+}
+#choice{/** 同意，拒绝 **/
+    margin-top: 60px;
+}
+.choice{
+    width: 50%;
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    top: 20px;
+}
+.choice div{
+    float: left;
+    width: 50%;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+}
+.color {
+    background-color: #0D98D7;
+    color: #ffffff;
+}
+.textarea{/**文本域**/
+    width: 80%;
+}
+#textarea{
+    width: 100%;
+    margin-top: 50px;
+}
+.textarea textarea{
+    width: 100%;
+    height: 150px;
+    background-color: #F6F6F6;
+    font-size: 20px;
+    border:0;
+}
+.course ul li:not(.li_padding){
+    padding-top: 20px;
+}
+.li_padding {
+    padding-top: 30px;
+}
+.line_height{
+    position: relative;
+    top: -60px;
+}
+.li_padding_bottom{
+    padding-bottom: 20px;
+}
+.agree{/** 同意界面 **/
+    padding-bottom: 50px;
+}
+.div_agree{
+    width: 30%;
+    height: 150px;
+    border: 1px solid #dfdfdf;
+}
+.div_agree div {
+    margin-top: 20px;
+    text-align: center;
+}
+#button{
+    float: right;
+    margin-top:0;
+    margin-right: 200px;
+    height: 25px;
+    line-height: 25px;
+}
+.button{
+    width: 70px;
+    height: 30px;
+    background-color: #0D98D7;
+    color: #ffffff;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.input_commodity{
+    height: 24px;
+    text-align: center;
+    border-color: #dfdfdf;
+}
+.inout_commodity_2{
+    width: 28px;
+    height: 28px;
+    color: #4F9EE1;
+    font-size: 20px;
+    border-color:#dfdfdf;
+}

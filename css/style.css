@@ -1,0 +1,33 @@
+*{
+    margin: 0 auto;
+    padding:0;
+}
+body{
+    background-color: #F6F6F6;
+    color: #999999;
+    font-weight: bolder;
+}
+header,section,footer{
+    width: 1200px;
+    background-color: #ffffff;
+}
+header,footer{
+    border-bottom:1px solid #dfdfdf;
+}
+.clr{
+    float: none;
+    clear: both;
+}
+ul{
+    list-style: none;
+}
+.course{
+    width: 80%;
+    margin-top:20px;
+}
+.spanColor{
+    color: #FF5D5D;
+}
+.div_color{
+    color: #e28a19;
+}

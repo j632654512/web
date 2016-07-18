@@ -1,0 +1,93 @@
+.select{
+    width: 80%;
+}
+#selectAge{
+    width: 100%;
+    color: #8A8A8A;
+    font-weight: bolder;
+    background-color: #F6F6F6;
+    border:0;
+}
+.inputComm input{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.shade{
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    position: fixed;
+    top:0;
+    left: 0;
+    display: none;
+}
+.shadeDiv{
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff;
+    z-index: 99999;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-left: -150px;
+    margin-top: -100px;
+    color: #000000;
+    text-align: center;
+    display: none;
+}
+
+.shadeDiv div:nth-child(1){
+    margin-top: 10px;
+}
+.shadeDiv textarea{
+    width: 80%;
+    height: 100px;
+    color: #8A8A8A;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.delete{
+    position: absolute;
+    right: 0;
+    top:0;
+    cursor: pointer;
+}
+#form0,#form1,#form2,#form3,#form4,#form5{
+    position: relative;
+    float: left;
+    margin-left:13%;
+}
+#img0,#img2,#img1,#img3,#img4,#img5{
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+#file0,#file1,#file2,#file3,#file4,#file5{
+    width: 150px;
+    height:150px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/**** 买家退货 ****/
+.title{
+    width: 80%;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+.selectAgeLo{
+    width: 30%;
+    color: #8A8A8A;
+    font-weight: bolder;
+    border-color: #d4d4d4;
+}

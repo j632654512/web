@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>趣汇商家订单管理</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="res/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="res/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="res/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="res/css/jquery.gritter.css"/>
+    <link rel="stylesheet" type="text/css" href="res/lineicons/style.css">
+    <link rel="stylesheet" type="text/css" href="res/css/demo_table.css/">
+    <!--代码高亮-->
+    <link href="res/css/jquery.dataTables.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="res/css/style.css" rel="stylesheet">
+    <link href="res/css/style-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <style>
+        #example_paginate {
+            width: 800px;
+            margin-bottom: 20px;
+            padding-right: 200px;
+        }
+
+        #example_filter {
+            margin-right: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+<section id="container">
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <!--logo start-->
+        <a href="index.html" class="logo"><b>趣汇商家退款管理</b></a>
+        <!--logo end-->
+        <div class="nav notify-row" id="top_menu">
+            <!--  notification start -->
+            <ul class="nav top-menu">
+                <!-- settings start -->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <i class="fa fa-tasks"></i>
+                        <span class="badge bg-theme">0</span>
+                    </a>
+                    <ul class="dropdown-menu extended tasks-bar">
+                        <div class="notify-arrow notify-arrow-green"></div>
+                        <li>
+                            <p class="green"></p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- settings end -->
+                <!-- inbox dropdown start-->
+                <li id="header_inbox_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="badge bg-theme">0</span>
+                    </a>
+                    <ul class="dropdown-menu extended inbox">
+                        <div class="notify-arrow notify-arrow-green"></div>
+                        <li>
+                            <p class="green"></p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- inbox dropdown end -->
+            </ul>
+            <!--  notification end -->
+        </div>
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li><a class="logout" href="../KankeNMS/login.html">注销</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+
+                <p class="centered"><a href="profile.html"><img src="res/img/ui-sam.jpg" class="img-circle" width="60"></a>
+                </p>
+                <h5 class="centered">商家头像</h5>
+
+                <li class="mt">
+                    <a class="active" href="index.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>退货管理</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-desktop"></i>
+                        <span>系统升级中</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <h3><i class="fa fa-angle-right"></i> 商品订单</h3>
+            <!--表单-->
+            <div class="row mt">
+                <div class="col-lg-12">
+                    <div class="form-panel">
+                        <h4 class="mb"><i class="fa fa-angle-right"></i>订单</h4>
+                        <div class="addOn">订单号: <span>123123123123123</span></div>
+                        <div class="addOn">店铺名: <span>沫沫陌陌默默</span>&nbsp;买家信息: <span>康师傅</span>&nbsp;<span>13555555555</span><div data-dz-name="button">同意全部退款</div></div>
+                        <table id="example" class="display" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>商品名</th>
+                                <th>单价</th>
+                                <th>数量</th>
+                                <th>状态</th>
+                                <th>物流单号</th>
+                                <th>退款状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Michael Bruce</td>
+                                <td>Javascript Developer</td>
+                                <td>Singapore</td>
+                                <td>29</td>
+                                <td>2011/06/27</td>
+                                <td class="ColorOne">退款中</td>
+                                <td data-dz-name="operation"> <div class="buttonTd">查看</div></td>
+                            </tr>
+                            <tr>
+                                <td>Donna Snider</td>
+                                <td>Customer Support</td>
+                                <td>New York</td>
+                                <td>27</td>
+                                <td>2011/01/25</td>
+                                <td class="ColorTwo">退款成功</td>
+                                <td data-dz-name="operation"> <div class="buttonTd">查看</div></td>
+                            </tr>
+                            <tr>
+                                <td>Donna Snider</td>
+                                <td>Customer Support</td>
+                                <td>New York</td>
+                                <td>27</td>
+                                <td>2011/01/25</td>
+                                <td class="ColorThree">买家申请退款,待核实</td>
+                                <td data-dz-name="operation"> <div class="buttonTd">查看</div></td>
+                            </tr>
+                            <tr>
+                                <td>Donna Snider</td>
+                                <td>Customer Support</td>
+                                <td>New York</td>
+                                <td>27</td>
+                                <td>2011/01/25</td>
+                                <td class="ColorFour">同意退货,待买家退货</td>
+                                <td data-dz-name="operation"> <div class="buttonTd">查看</div></td>
+                            </tr>
+                            <tr>
+                                <td>Donna Snider</td>
+                                <td>Customer Support</td>
+                                <td>New York</td>
+                                <td>27</td>
+                                <td>2011/01/25</td>
+                                <td>退款关闭</td>
+                                <td data-dz-name="operation"> <div class="buttonTd">查看</div></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!-- col-lg-12-->
+            </div><!-- /row -->
+        </section>
+    </section>
+</section>
+<!--  遮罩列表  -->
+<div class="shade"></div><!-- 弹出框 -->
+<div class="shadeDiv">
+    <div>批量同意退货只针对待发货商品有效 确定商品尚未发货且同意退款吗？</div>
+    <div class="delete">×</div>
+    <div class="button buttonTd" id="Bon" style="margin-top: 10px;">确定</div>
+</div>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="res/js/jquery-1.11.3.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("div[data-dz-name='button']").click(function () {
+
+            $(".shade").css({display:"block"});
+            $(".shadeDiv").css({display:"block"})
+            $("#Bon,.delete").click(function () {
+                $(".shade").css({display:"none"});
+                $(".shadeDiv").css({display:"none"})
+            })
+        })
+    })
+    window.onload = function(){
+        $("#example_length").remove();
+        $("#example_filter").remove();
+    }
+</script>
+<script src="res/js/bootstrap.min.js"></script>
+<!--代码高亮-->
+<script type="text/javascript" charset="utf8" src="res/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="res/js/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" charset="utf8" src="res/js/jquery.nicescroll.js"></script>
+<!--日期格式化框架-->
+<script type="text/javascript">
+    function noteTitle(obj) {
+        var note = $(obj).attr("title");
+        alert(note);
+    }
+
+    /**
+     * 通过模板渲染返回的数据
+     * @param data
+     */
+    function renderDetail(data) {
+        console.log(data);
+        if (data) {
+            var pagefn = doT.template($('#detail_tmpl').text());
+            var detail = $('#detail');
+            console.log(pagefn(data));
+            detail.html(pagefn(data));
+        }
+    }
+    /**
+     * 注册事件
+     */
+    $(function () {
+
+
+        var table = $('#list').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": {url: "http://192.168.1.198:8083/admin/rest/order/return/list", dataSrc: "content", type: "POST"},
+            "columns": [
+                {"data": "no"},
+                {"data": "username"},
+                {"data": "phone"},
+                {"data": "id"},
+                {"data": "type"},
+                {"data": "createTime"},
+                {"data": "payTime"},
+                {"data": "operate"}
+            ],
+            "language": {
+                "url": "res/js/Chinese.json"
+            }
+        });
+
+        table.on("xhr.dt", function (e, settings, json, xhr) {
+            json['recordsTotal'] = json['total'];
+            json['recordsFiltered'] = json['total'];
+            $(json.content).each(function (key, value) {
+                value['createTime'] = moment(value['createTime']).format("yyyy-MM-dd hh:mm:ss");
+                value["operate"] = "<a href='javascript:void(0);' class='show_detail' data-order-no='" + value.orderNo + "'>商品详情</a>"
+
+            })
+        });
+        $('#order_list').on("preXhr.dt", function (e, settings, data) {
+        });
+        table.on('draw.dt', function () {
+        });
+    });
+
+</script>
+<!--<script type="text/javascript">SyntaxHighlighter.all();</script>-->
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://datatables.club/example/basic_init/alt_pagination.html'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://datatables.club/example/basic_init/alt_pagination.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = 'res/js/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<script type="text/javascript">
+    //判断是否显示更新提示
+    /*   $.get("/assets/updatelog.txt", function (data) {
+     var json = JSON.parse(data);
+     if (json.isNote) {
+     var cache = localStorage['dt.thxopen.com.note'];
+     if (typeof cache == 'undefined') {
+     $("#updateFlag").addClass("hot");
+     } else {
+     var current = new Date().getTime();
+     var bl = current - cache;
+     var s = 24 * 60 * 60 * 1000;
+     if (bl > s) {
+     $("#updateFlag").addClass("hot");
+     }
+     }
+     }
+     });*/
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#example').dataTable({
+            "pagingType": "full_numbers",
+            "language": {
+                "url": "res/js/Chinese.json"
+            }
+        });
+    });
+</script>
+<!--common script for all pages-->
+<script src="res/js/common-scripts.js"></script>
+</body>
+</html>

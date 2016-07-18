@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>处理中</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="dz"/>
+    <meta name="robots" content="all">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <link rel="shortcut icon"href="images/ion.ico">
+    <link rel="stylesheet" type="text/css" href="css/styleOne.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/SellerDispose.css">
+    <link rel="stylesheet" href="control/css/zyUpload.css" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <ul class="flow_img"><!--退款进程-->
+        <li><div><img src="images/shenqing.png" alt="申请"></div><div>买家申请退款</div></li>
+        <li class="img_padding"><div><img src="images/jiantou.png" alt="箭头"></div></li>
+        <li><div><img src="images/tuihuo.png" alt=""></div><div>处理退货申请</div></li>
+        <li class="img_padding"><div><img src="images/jiantou.png" alt="箭头"></div></li>
+        <li><div><img src="images/maijia.png" alt=""></div><div>买家退货给卖家</div></li>
+        <li class="img_padding"><div><img src="images/jiantou.png" alt="箭头"></div></li>
+        <li><div><img src="images/tuikuan2.png" alt=""></div><div class="div_color">退款关闭</div></li>
+        <li class="clr"></li>
+    </ul>
+</header>
+<section><!--同意、拒绝-->
+    <div class="consent">
+        <div class="consentText">
+            <p>本次退款 &nbsp;<span>自贡冷吃兔</span>&nbsp;共计<span>2</span>件 单价<span>22.00</span>元 共<span>39.90</span>元</p>
+            <p>同意退款后，货款将会退回买家钱包余额，确认商品没有问题吗？</p>
+        </div>
+    </div>
+    <div id="choice" class="choice">
+        <div class="color" data-dz-name="Conversion">同意</div>
+        <div  data-dz-name="Conversion">拒绝退货申请</div>
+    </div>
+</section>
+<footer class="decline">
+    <div class="textarea">
+        <textarea placeholder="请输入拒绝退款的理由"></textarea>
+        <form name="form0" id="form0" >
+            <img src="images/shangc.png" id="img0" >
+            <input type="file" name="file0" id="file0" multiple="multiple" />
+        </form>
+        <form name="form0" id="form1" >
+            <img src="images/shangc.png" id="img1" >
+            <input type="file" name="file0" id="file1" multiple="multiple" />
+        </form>
+        <form name="form0" id="form2" >
+            <img src="images/shangc.png" id="img2" >
+            <input type="file" name="file0" id="file2" multiple="multiple" />
+        </form>
+        <div class="clr"></div>
+        <div class="button">确定</div>
+    </div>
+</footer>
+<footer class="agree">
+    <div class="div_agree">
+        <div>请选择同意件数</div>
+        <div> <form>
+            <input class="inout_commodity_2" type=button value="-"
+                   onClick="javascript:this.form.amount.value--;">
+            <input class="input_commodity"  type=text name=amount value=1>
+            <input class="inout_commodity_2" type=button value="+"
+                   onClick="javascript:this.form.amount.value++;">
+        </form></div>
+        <div id="buttonClick" class="button">确定</div>
+    </div>
+</footer>
+<footer>
+    <div class="course"><!--进程-->
+        <ul>
+            <li><span>自贡冷吃兔</span> <span>x2</span> <span class="spanColor">￥39.90</span></li>
+            <li class="li_padding"><img src="images/iicon.jpg" alt="">&nbsp;进程</li>
+            <li><span>2016.6.26</span> <span>16:20:30</span> 卖家已经收到退货商品，并核对无误，同意退款</li>
+            <li><span>2016.6.26</span> <span>16:20:30</span> 买家已寄回需退货的商品 &nbsp;快递单号：123123123</li>
+            <li><span>2016.6.26</span> <span>16:20:30</span> 卖家已同意退货 退货原因:&nbsp;(<span>七天无理由退货（不喜欢）邮费付费方:买家</span>)</li>
+            <li><span class="line_height">照片：</span><img src="images/shangc.png" alt="退货原因"><img src="images/shangc.png" alt="退货原因"></li>
+            <li class="li_padding_bottom">
+                <span>2016.6.26</span>
+                <span>16:20:30</span>&nbsp;
+                <span>某某某</span>&nbsp;
+                <span>13666666666</span>&nbsp;订单号:
+                <span>13123123123123</span>&nbsp;
+                <span>自贡冷吃兔</span>&nbsp;
+                <span class="spanColor">￥39.90</span>&nbsp;
+                <span>2</span>袋&nbsp;已申请退货
+            </li>
+        </ul>
+    </div>
+</footer>
+</body>
+<script type="text/javascript" src="../../js/jquery-1.11.3.js"></script>
+<script type="text/javascript" >
+    $("#file0").change(function(){//替换图片
+        var objUrl = getObjectURL(this.files[0]) ;
+        console.log("objUrl = "+objUrl) ;
+        if (objUrl) {
+            $("#img0").attr("src", objUrl) ;
+        }
+    }) ;
+    $("#file1").change(function(){
+        var objUrl = getObjectURL(this.files[0]) ;
+        console.log("objUrl = "+objUrl) ;
+        if (objUrl) {
+            $("#img1").attr("src", objUrl) ;
+        }
+    }) ;
+    $("#file2").change(function(){
+        var objUrl = getObjectURL(this.files[0]) ;
+        console.log("objUrl = "+objUrl) ;
+        if (objUrl) {
+            $("#img2").attr("src", objUrl) ;
+        }
+    }) ;
+    //建立一個可存取到該file的url
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+    window.onload = $(".decline").hide();//进入页面就调用
+    $("div[data-dz-name='Conversion']").click(function () {//点击切换同意，拒绝
+
+        $("div[data-dz-name='Conversion']").removeClass("color");
+
+            $(this).addClass("color")
+            if($(this).text() == "同意"){
+
+                $(".decline").hide()
+                $(".agree").show()
+
+            }else {
+                $(".decline").show()
+                $(".agree").hide()
+            }
+    })
+    $("#buttonClick").click(function () {
+        $(".agree").hide()
+        $(".decline").hide()
+        $(".consentText").text("该商品已退货完成，（退货关闭）")
+        $(".choice").hide()
+    })
+</script>
+
