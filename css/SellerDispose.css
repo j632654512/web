@@ -59,7 +59,7 @@
     float: left;
     margin-left:13%;
 }
-#img0,#img2,#img1,#img3,#img4,#img5{
+#img_1,#img_2,#img_3,#img3,#img4,#img5,#img6{
     width: 150px;
     height: 150px;
     margin-top: 50px;
@@ -67,18 +67,16 @@
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
+    cursor: pointer;
 }
-#file0,#file1,#file2,#file3,#file4,#file5{
+#imgkey_1,#imgkey_2,#imgkey_3,#file3,#file4,#file5{
     width: 150px;
     height:150px;
     position: absolute;
     top: 50px;
-    left: 0;
-    opacity: 0;
+    left: 100px;
     cursor: pointer;
 }
-
-
 /**** 买家退货 ****/
 .title{
     width: 80%;

@@ -43,19 +43,19 @@
     </div>
 </section>
 <footer class="decline">
+    <div id="container">
+        <a id="pickfiles" href="#"><span id="spanId"></span></a>
+    </div>
     <div class="textarea">
         <textarea placeholder="请输入拒绝退款的理由"></textarea>
         <form name="form0" id="form0" >
-            <img src="images/shangc.png" id="img0" >
-            <input type="file" name="file0" id="file0" multiple="multiple" />
+            <img src="images/shangc.png" id="img_1"  onclick="UploadImg('1')">
         </form>
         <form name="form0" id="form1" >
-            <img src="images/shangc.png" id="img1" >
-            <input type="file" name="file0" id="file1" multiple="multiple" />
+            <img src="images/shangc.png" id="img_2"  onclick="UploadImg('2')">
         </form>
         <form name="form0" id="form2" >
-            <img src="images/shangc.png" id="img2" >
-            <input type="file" name="file0" id="file2" multiple="multiple" />
+            <img src="images/shangc.png" id="img_3"  onclick="UploadImg('3')">
         </form>
         <div class="clr"></div>
         <div class="button">确定</div>
@@ -89,16 +89,13 @@
         <div  id="textarea" class="textarea">
             <textarea placeholder="请输入退款的理由,(选填)"></textarea>
                 <form name="form0" id="form3" >
-                    <img src="images/shangc.png" id="img3" >
-                    <input type="file" name="file0" id="file3" multiple="multiple" />
+                    <img src="images/shangc.png" id="img4" onclick="UploadImg('4')">
                 </form>
                 <form name="form0" id="form4" >
-                    <img src="images/shangc.png" id="img4" >
-                    <input type="file" name="file0" id="file4" multiple="multiple" />
+                    <img src="images/shangc.png" id="img5" onclick="UploadImg('5')">
                 </form>
                 <form name="form0" id="form5" >
-                    <img src="images/shangc.png" id="img5" >
-                    <input type="file" name="file0" id="file5" multiple="multiple" />
+                    <img src="images/shangc.png" id="img6" onclick="UploadImg('6')">
                 </form>
                 <div class="clr"></div>
             <div class="button" data-dz-name="button" style="width: 280px">确定同意发货，并发送收货地址</div>
@@ -133,6 +130,10 @@
 </div>
 </body>
 <script type="text/javascript" src="../../js/jquery-1.11.3.js"></script>
+<script src="../qiniu-upload-js/plupload/plupload.full.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../qiniu-upload-js/plupload/qiniu.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../qiniu-upload-js/plupload/jquery.json.js" type="text/javascript" charset="utf-8"></script>
+<script src="res/js/style.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     window.onload = $(".decline").hide();//进入页面就调用
     $("div[data-dz-name='Conversion']").click(function () {//点击切换同意，拒绝
@@ -152,63 +153,9 @@
     })
 </script>
 <script>
-    $("#file0").change(function(){//替换图片
-        var objUrl = getObjectURL(this.files[0]) ;
-        console.log("objUrl = "+objUrl) ;
-        if (objUrl) {
-            $("#img0").attr("src", objUrl) ;
-        }
-    }) ;
-    $("#file1").change(function(){
-        var objUrl = getObjectURL(this.files[0]) ;
-        console.log("objUrl = "+objUrl) ;
-        if (objUrl) {
-            $("#img1").attr("src", objUrl) ;
-        }
-    }) ;
-    $("#file2").change(function(){
-        var objUrl = getObjectURL(this.files[0]) ;
-        console.log("objUrl = "+objUrl) ;
-        if (objUrl) {
-            $("#img2").attr("src", objUrl) ;
-        }
-    }) ;
-    $("#file3").change(function(){
-        var objUrl = getObjectURL(this.files[0]) ;
-        console.log("objUrl = "+objUrl) ;
-        if (objUrl) {
-            $("#img3").attr("src", objUrl) ;
-        }
-    }) ;
-    $("#file4").change(function(){
-        var objUrl = getObjectURL(this.files[0]) ;
-        console.log("objUrl = "+objUrl) ;
-        if (objUrl) {
-            $("#img4").attr("src", objUrl) ;
-        }
-    }) ;
-    $("#file5").change(function(){
-        var objUrl = getObjectURL(this.files[0]) ;
-        console.log("objUrl = "+objUrl) ;
-        if (objUrl) {
-            $("#img5").attr("src", objUrl) ;
-        }
-    }) ;
-    //建立一個可存取到該file的url
-    function getObjectURL(file) {
-        var url = null ;
-        if (window.createObjectURL!=undefined) { // basic
-            url = window.createObjectURL(file) ;
-        } else if (window.URL!=undefined) { // mozilla(firefox)
-            url = window.URL.createObjectURL(file) ;
-        } else if (window.webkitURL!=undefined) { // webkit or chrome
-            url = window.webkitURL.createObjectURL(file) ;
-        }
-        return url ;
-    }
     $("div[data-dz-name='button']").click(function () {
         $(".shade").css({display:"block"});
-        $(".shadeDiv").css({display:"block"})
+        $(".shadeDiv").css({display:"block"});
         $("#Bon,.delete").click(function () {
             $(".shade").css({display:"none"});
             $(".shadeDiv").css({display:"none"})
